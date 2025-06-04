@@ -6,16 +6,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>關於白水 - 白水音樂</title>
   <style>
-    body { font-family: "Noto Sans TC", sans-serif; padding: 2rem; background-color: #f9f8f6; color: #333; }
-    h1 { color: #d4af37; }
-    a { display: inline-block; margin-top: 2rem; color: #555; text-decoration: underline; }
+    :root {
+      --primary-color: #f9f8f6;
+      --accent-color: #d4af37;
+      --text-color: #333;
+      --font-sans: "Noto Sans TC", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: 0;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+    }
+    header, nav, section, footer {
+      max-width: 900px;
+      margin: auto;
+    }
+    header {
+      padding: 2rem 1rem;
+      text-align: center;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    header h1 { color: var(--accent-color); }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: #fafafa;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+    }
+    section {
+      padding: 3rem 1.5rem;
+    }
+    section h2 {
+      border-left: 5px solid var(--accent-color);
+      padding-left: 1rem;
+      margin-bottom: 1rem;
+    }
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
   </style>
 </head>
 <body>
-  <h1>關於白水</h1>
-  <p>白水音樂是一間結合信仰與音樂的創作空間，成立於對聲音純淨與人心連結的追求之中。</p>
-  <p>我們的核心價值是「純淨、靈感、信實」，希望讓每位音樂人能在這裡找到心靈與音樂的共鳴。</p>
-  <p>工作室名稱「白水」，寓意潔淨如水、流動不止，也象徵著我們在音樂與信仰中永不止息的探索。</p>
-  <a href="index.html">← 返回首頁</a>
+  <header>
+    <h1>白水音樂 WHITER MUSIC</h1>
+    <p>錄音・練團・製作・信仰與音樂的交會處</p>
+  </header>
+  <nav>
+    <a href="/whitermusic-site/about.html">關於白水</a>
+    <a href="/whitermusic-site/services.html">服務項目</a>
+    <a href="/whitermusic-site/equipment.html">設備介紹</a>
+    <a href="/whitermusic-site/contact.html">聯絡方式</a>
+  </nav>
+  <section>
+    <h2>關於白水</h2>
+    <p>白水音樂是一間結合信仰與音樂的創作空間，成立於對聲音純淨與人心連結的追求之中。</p>
+    <p>我們的核心價值是「純淨、靈感、信實」，希望讓每位音樂人能在這裡找到心靈與音樂的共鳴。</p>
+    <p>工作室名稱「白水」，寓意潔淨如水、流動不止，也象徵著我們在音樂與信仰中永不止息的探索。</p>
+  </section>
+  <footer>
+    <p>&copy; 2025 白水音樂 WHITER MUSIC. 版權所有。</p>
+  </footer>
 </body>
 </html>
