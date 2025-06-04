@@ -4,33 +4,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>關於白水 - 白水音樂</title>
+  <title>白水音樂 WHITER MUSIC</title>
   <style>
     :root {
       --primary-color: #f9f8f6;
-      --accent-color: #d4af37;
+      --accent-color: #d4af37; /* 金色點綴 */
       --text-color: #333;
       --font-sans: "Noto Sans TC", sans-serif;
     }
-    * { box-sizing: border-box; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: var(--font-sans);
       margin: 0;
       padding: 0;
       background-color: var(--primary-color);
       color: var(--text-color);
+      line-height: 1.6;
     }
-    header, nav, section, footer {
-      max-width: 900px;
-      margin: auto;
-    }
+
     header {
       padding: 2rem 1rem;
       text-align: center;
       background-color: #ffffff;
       border-bottom: 1px solid #e0e0e0;
     }
-    header h1 { color: var(--accent-color); }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+
     nav {
       display: flex;
       justify-content: center;
@@ -40,25 +48,56 @@
       background-color: #fafafa;
       border-bottom: 1px solid #e0e0e0;
     }
+
     nav a {
       text-decoration: none;
       color: var(--text-color);
       font-weight: bold;
+      transition: color 0.2s;
     }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
     section {
       padding: 3rem 1.5rem;
+      max-width: 900px;
+      margin: auto;
     }
+
     section h2 {
       border-left: 5px solid var(--accent-color);
       padding-left: 1rem;
       margin-bottom: 1rem;
+      color: #222;
     }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
     footer {
       background-color: #f1f1f1;
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
       color: #666;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
     }
   </style>
 </head>
