@@ -79,15 +79,13 @@
       line-height: 2.2;
       margin-top: 2rem;
       white-space: pre-line;
+      background-color: var(--primary-color);
       padding: 3rem 2rem;
       border-radius: 10px;
       color: #2c2c2c;
-      box-shadow: 0 0 20px rgba(0,0,0,0.05);
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeInUp 1.8s ease-out forwards;
-      background-color: #fff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
+
 
     @keyframes fadeInUp {
       to {
@@ -105,10 +103,23 @@
     }
 
     @media (max-width: 600px) {
-      header h1 { font-size: 1.5rem; }
-      nav { flex-direction: column; align-items: center; }
-      section { padding: 2rem 1rem; }
-      .letter-block { font-size: 1.05rem; padding: 2rem 1.5rem; }
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+
+      .letter-block {
+        font-size: 1.05rem;
+        padding: 2rem 1.5rem;
+      }
     }
   </style>
 </head>
