@@ -1,24 +1,17 @@
-<!-- 統一風格子頁範本範例：以首頁風格套用於子頁面 -->
-
-<!-- place.html -->
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>白水音樂 WHITER MUSIC</title>
+  <title>地點資訊 - 白水音樂</title>
   <style>
     :root {
       --primary-color: #f9f8f6;
-      --accent-color: #d4af37; /* 金色點綴 */
+      --accent-color: #d4af37;
       --text-color: #333;
       --font-sans: "Noto Sans TC", sans-serif;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       font-family: var(--font-sans);
       margin: 0;
@@ -27,20 +20,17 @@
       color: var(--text-color);
       line-height: 1.6;
     }
-
     header {
       padding: 2rem 1rem;
       text-align: center;
       background-color: #ffffff;
       border-bottom: 1px solid #e0e0e0;
     }
-
     header h1 {
       font-size: 2rem;
       margin-bottom: 0.5rem;
       color: var(--accent-color);
     }
-
     nav {
       display: flex;
       justify-content: center;
@@ -50,35 +40,40 @@
       background-color: #fafafa;
       border-bottom: 1px solid #e0e0e0;
     }
-
     nav a {
       text-decoration: none;
       color: var(--text-color);
       font-weight: bold;
-      transition: color 0.2s;
     }
-
     nav a:hover {
       color: var(--accent-color);
     }
-
     section {
       padding: 3rem 1.5rem;
       max-width: 900px;
       margin: auto;
     }
-
     section h2 {
       border-left: 5px solid var(--accent-color);
       padding-left: 1rem;
       margin-bottom: 1rem;
       color: #222;
     }
-
-    ul {
-      padding-left: 1.5rem;
+    .map {
+      width: 100%;
+      height: 350px;
+      border: none;
+      margin-bottom: 1rem;
     }
-
+    .place-description {
+      margin-bottom: 1rem;
+    }
+    .place-img {
+      max-width: 100%;
+      border-radius: 8px;
+      display: block;
+      margin: 1rem 0;
+    }
     footer {
       background-color: #f1f1f1;
       text-align: center;
@@ -86,20 +81,10 @@
       font-size: 0.9rem;
       color: #666;
     }
-
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-
-      nav {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      section {
-        padding: 2rem 1rem;
-      }
+      header h1 { font-size: 1.5rem; }
+      nav { flex-direction: column; align-items: center; }
+      section { padding: 2rem 1rem; }
     }
   </style>
 </head>
@@ -110,37 +95,24 @@
   </header>
   <nav>
     <a href="/whitermusic-site/index.html">關於白水</a>
-    <a href="/whitermusic-site/environment.html">環境&設備</a>
-    <a href="/whitermusic-site/services.html">服務&方案</a>
+    <a href="/whitermusic-site/environment.html">環境介紹</a>
+    <a href="/whitermusic-site/services.html">服務項目</a>
+    <a href="/whitermusic-site/equipment.html">設備介紹</a>
     <a href="/whitermusic-site/founder.html">創辦人/錄音師</a>
-    <a href="/whitermusic-site/place.html">白水位置</a>
-    <a href="/whitermusic-site/booking.html">錄音/練團預約</a>
+    <a href="/whitermusic-site/contact.html">聯絡方式</a>
   </nav>
   <section>
-  <h1>聯絡方式</h1>
-  <p>
-    地址：新北市三峽區國光街330巷1弄1號(預約制)<br />
-    電子郵件：brianden2356@gmail.com<br />
-    Instagram：<a href="https://www.instagram.com/whitermusicstudio" target="_blank">@whitermusicstudio</a><br />
-    預約合作：請透過 IG / Email / Line 聯繫我們，團隊將於24小時內回覆。
-  </p>
+    <h2>聯絡方式</h2>
+    <p>電子郵件：brianden2356@gmail.com</p>
+    <p>Instagram：<a href="https://www.instagram.com/whiter_music_studio" target="_blank">@whiter_music_studio</a></p>
+    <p>預約合作：請透過 IG / Email / Line 聯繫我們，團隊將於24小時內回覆。</p>
+
+    <h2>地理位置</h2>
+    <iframe class="map" src="https://www.google.com/maps?q=新北市三峽區國光街330巷1弄1號&output=embed"></iframe>
+    <p class="place-description">地址：新北市三峽區國光街330巷1弄1號(預約制)</p>
+    <p>白水音樂位在北大國小旁，走到三陽機車的轉角後轉入，巷子內左邊第一間即為白水音樂</p>
+    <img class="place-img" src="place.jpg" alt="白水音樂位置圖">
   </section>
-  <div style="text-align: center; margin-top: 2rem;">
-  <a href="https://lin.ee/ub9tvNF" target="_blank">
-    <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png"
-         alt="LINE"
-         style="
-           height: 36px;
-           border: 1px solid #00a600;
-           border-radius: 6px;
-           box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-           transition: transform 0.2s;
-         "
-         onmouseover="this.style.transform='scale(1.05)'"
-         onmouseout="this.style.transform='scale(1)'"
-    />
-  </a>
-</div>
   <footer>
     <p>&copy; 2025 白水音樂 WHITER MUSIC. 版權所有。</p>
   </footer>
