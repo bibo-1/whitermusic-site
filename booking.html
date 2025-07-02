@@ -1,0 +1,141 @@
+<!-- 統一風格子頁範本範例：以首頁風格套用於子頁面 -->
+
+<!-- booking.html -->
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>錄音/練團預約 - 白水音樂</title>
+  <style>
+    :root {
+      --primary-color: #f9f8f6;
+      --accent-color: #d4af37;
+      --text-color: #333;
+      --font-sans: "Noto Sans TC", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: 0;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+      line-height: 1.8;
+    }
+    header {
+      padding: 2rem 1rem;
+      text-align: center;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+      background-color: #fafafa;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: var(--accent-color);
+    }
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 1.6rem;
+      border-left: 5px solid var(--accent-color);
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+      color: #222;
+    }
+    .step {
+      margin-bottom: 2rem;
+    }
+    .calendar {
+      margin: 3rem 0;
+      text-align: center;
+    }
+    footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .line-button {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .line-button img {
+      height: 36px;
+      border: 1px solid #00a600;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .line-button img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>白水音樂 WHITER MUSIC</h1>
+    <p>錄音・練團・製作・信仰與音樂的交會處</p>
+  </header>
+  <nav>
+    <a href="/whitermusic-site/index.html">關於白水</a>
+    <a href="/whitermusic-site/environment.html">環境介紹</a>
+    <a href="/whitermusic-site/services.html">服務項目</a>
+    <a href="/whitermusic-site/equipment.html">設備介紹</a>
+    <a href="/whitermusic-site/founder.html">創辦人/錄音師</a>
+    <a href="/whitermusic-site/place.html">白水位置</a>
+    <a href="/whitermusic-site/booking.html">錄音/練團預約</a>
+  </nav>
+  <section>
+    <h2>錄音/練團預約方式</h2>
+    <div class="step">
+      <p>1. 透過 Line 好友加入白水音樂官方帳號</p>
+      <p>2. 在 Line 聊天室中點選需要預約的服務</p>
+      <p>3. 透過文字預約需要時段（註：練團預約最低為 2 小時）</p>
+      <p style="margin-left: 2rem;">
+        - 預約範例 -<br>
+        您好，我是曾先生，預約 6/21 13:00-16:00 練團<br>
+        樂隊編制：鼓 / eg1 / eg2 / kb / bs / vox*2<br>
+        需要借兩顆 DI、kb<br>
+        謝謝
+      </p>
+      <p>4. 請於約定時間前來，並在約定時間恢復場地原狀後離開</p>
+      <p>這裡是白水音樂，謝謝您的借閱，我們在三峽等待為您服務</p>
+    </div>
+    <div class="calendar">
+      <!-- Google Calendar iframe 可放這裡 -->
+      <p>(Google Calendar 尚未嵌入)</p>
+    </div>
+    <div class="line-button">
+      <a href="https://lin.ee/ub9tvNF" target="_blank">
+        <img src="https://scdn.line-apps.com/n/line_add_friends/btn/icon_64.png" alt="LINE">
+      </a>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2025 白水音樂 WHITER MUSIC. 版權所有。</p>
+  </footer>
+</body>
+</html>
