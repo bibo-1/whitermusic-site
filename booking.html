@@ -1,13 +1,9 @@
-<!-- 統一風格子頁範本範例：以首頁風格套用於子頁面 -->
-
-<!-- booking.html -->
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>錄音/練團預約 - 白水音樂</title>
+  <title>地點資訊 - 白水音樂</title>
   <style>
     :root {
       --primary-color: #f9f8f6;
@@ -22,7 +18,7 @@
       padding: 0;
       background-color: var(--primary-color);
       color: var(--text-color);
-      line-height: 1.8;
+      line-height: 1.6;
     }
     header {
       padding: 2rem 1rem;
@@ -58,18 +54,25 @@
       margin: auto;
     }
     section h2 {
-      font-size: 1.6rem;
       border-left: 5px solid var(--accent-color);
       padding-left: 1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
       color: #222;
     }
-    .step {
-      margin-bottom: 2rem;
+    .map {
+      width: 100%;
+      height: 350px;
+      border: none;
+      margin-bottom: 1rem;
     }
-    .calendar {
-      margin: 3rem 0;
-      text-align: center;
+    .place-description {
+      margin-bottom: 1rem;
+    }
+    .place-img {
+      max-width: 100%;
+      border-radius: 8px;
+      display: block;
+      margin: 1rem 0;
     }
     footer {
       background-color: #f1f1f1;
@@ -78,19 +81,10 @@
       font-size: 0.9rem;
       color: #666;
     }
-    .line-button {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .line-button img {
-      height: 36px;
-      border: 1px solid #00a600;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .line-button img:hover {
-      transform: scale(1.05);
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      nav { flex-direction: column; align-items: center; }
+      section { padding: 2rem 1rem; }
     }
   </style>
 </head>
@@ -101,50 +95,24 @@
   </header>
   <nav>
     <a href="/whitermusic-site/index.html">關於白水</a>
-    <a href="/whitermusic-site/environment.html">環境&設備</a>
-    <a href="/whitermusic-site/services.html">服務&方案</a>
+    <a href="/whitermusic-site/environment.html">環境介紹</a>
+    <a href="/whitermusic-site/services.html">服務項目</a>
+    <a href="/whitermusic-site/equipment.html">設備介紹</a>
     <a href="/whitermusic-site/founder.html">創辦人/錄音師</a>
-    <a href="/whitermusic-site/place.html">白水位置</a>
-    <a href="/whitermusic-site/booking.html">錄音/練團預約</a>
+    <a href="/whitermusic-site/contact.html">聯絡方式</a>
   </nav>
   <section>
-    <h2>錄音/練團預約方式</h2>
-    <div class="step">
-      <p>1. 透過 Line 好友加入白水音樂官方帳號</p>
-      <p>2. 在 Line 聊天室中點選需要預約的服務</p>
-      <p>3. 透過文字預約需要時段（註：練團預約最低為 2 小時）</p>
-      <p style="margin-left: 2rem;">
-        - 預約範例 -<br>
-        您好，我是曾先生，預約 6/21 13:00-16:00 練團<br>
-        樂隊編制：鼓 / eg1 / eg2 / kb / bs / vox*2<br>
-        需要借兩顆 DI、kb<br>
-        謝謝
-      </p>
-      <p>4. 請於約定時間前來，並在約定時間恢復場地原狀後離開</p>
-      <p>這裡是白水音樂，謝謝您的借閱，我們在三峽等待為您服務</p>
-    </div>
-    <div class="calendar">
-      <!-- Google Calendar iframe 可放這裡 -->
-      <p>(Google Calendar 尚未嵌入)</p>
-    </div>
+    <h2>聯絡方式</h2>
+    <p>電子郵件：brianden2356@gmail.com</p>
+    <p>Instagram：<a href="https://www.instagram.com/whiter_music_studio" target="_blank">@whiter_music_studio</a></p>
+    <p>預約合作：請透過 IG / Email / Line 聯繫我們，團隊將於24小時內回覆。</p>
 
+    <h2>地理位置</h2>
+    <iframe class="map" src="https://www.google.com/maps?q=新北市三峽區國光街330巷1弄1號&output=embed"></iframe>
+    <p class="place-description">地址：新北市三峽區國光街330巷1弄1號(預約制)</p>
+    <p>白水音樂位在北大國小旁，走到三陽機車的轉角後轉入，巷子內左邊第一間即為白水音樂</p>
+    <img class="place-img" src="place.jpg" alt="白水音樂位置圖">
   </section>
-  <div style="text-align: center; margin-top: 2rem;">
-  <a href="https://lin.ee/ub9tvNF" target="_blank">
-    <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png"
-         alt="LINE"
-         style="
-           height: 36px;
-           border: 1px solid #00a600;
-           border-radius: 6px;
-           box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-           transition: transform 0.2s;
-         "
-         onmouseover="this.style.transform='scale(1.05)'"
-         onmouseout="this.style.transform='scale(1)'"
-    />
-  </a>
-</div>
   <footer>
     <p>&copy; 2025 白水音樂 WHITER MUSIC. 版權所有。</p>
   </footer>
