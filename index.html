@@ -38,48 +38,6 @@
       margin-bottom: 0.5rem;
       color: var(--accent-color);
     }
-
-    .menu-toggle {
-    display: none;
-    background-color: transparent;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-    }
-
-    @media (max-width: 768px) {
-    .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    z-index: 1000;
-    }
-
-    nav {
-    display: none;
-    flex-direction: column;
-    background-color: #fafafa;
-    width: 100%;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    border-top: 1px solid #ddd;
-    padding: 1rem 0;
-    }
-
-    nav.show {
-    display: flex;
-    }
-
-    nav a {
-    padding: 0.5rem 1rem;
-    width: 100%;
-    text-align: center;
-    }
-    }
-
-
     
     nav {
       display: flex;
@@ -175,8 +133,6 @@
     <h1>白水音樂 WHITER MUSIC</h1>
     <p>錄音・練團・製作・信仰與音樂的交會處</p>
   </header>
-
-  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
   
   <nav>
     <a href="/whitermusic-site/index.html">關於白水</a>
@@ -225,14 +181,6 @@
   <footer>
     <p>&copy; 2025 白水音樂 WHITER MUSIC. 版權所有。</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('show');
-    }
-  </script>
-
   
 </body>
 </html>
