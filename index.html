@@ -112,13 +112,6 @@
         font-size: 1.5rem;
       }
       
-      .letter-block::after {
-        width: 80px;
-        height: 80px;
-        bottom: 15px;
-        right: 15px;
-      }
-
       section {
         padding: 2rem 1rem;
       }
@@ -152,6 +145,16 @@
     .letter-block:hover::after {
       transform: scale(1.05);
     }
+
+    @media (max-width: 600px) {
+      .letter-block::after {
+      width: 80px;
+      height: 80px;
+      bottom: 15px;
+      right: 15px;
+      }
+    }
+    
   </style>
 </head>
 <body>
