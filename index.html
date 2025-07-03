@@ -121,6 +121,29 @@
         padding: 2rem 1.5rem;
       }
     }
+    .letter-block {
+      position: relative;
+    }
+
+    .letter-block::after {
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      width: 80px;
+      height: 80px;
+      background-image: url('wax.png'); /* 根據實際路徑調整 */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+      opacity: 0.95;
+      transition: transform 0.3s ease;
+    }
+
+    .letter-block:hover::after {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
