@@ -40,23 +40,23 @@
     }
 
     .menu-toggle {
-  display: none;
-  background-color: transparent;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
+    display: none;
+    background-color: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    }
 
-@media (max-width: 768px) {
-  .menu-toggle {
+    @media (max-width: 768px) {
+    .menu-toggle {
     display: block;
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
     z-index: 1000;
-  }
+    }
 
-  nav {
+    nav {
     display: none;
     flex-direction: column;
     background-color: #fafafa;
@@ -66,18 +66,18 @@
     left: 0;
     border-top: 1px solid #ddd;
     padding: 1rem 0;
-  }
+    }
 
-  nav.show {
+    nav.show {
     display: flex;
-  }
+    }
 
-  nav a {
+    nav a {
     padding: 0.5rem 1rem;
     width: 100%;
     text-align: center;
-  }
-}
+    }
+    }
 
 
     
@@ -226,12 +226,12 @@
     <p>&copy; 2025 白水音樂 WHITER MUSIC. 版權所有。</p>
   </footer>
 
-<script>
-  function toggleMenu() {
+  <script>
+    function toggleMenu() {
     const nav = document.querySelector('nav');
     nav.classList.toggle('show');
-  }
-</script>
+    }
+  </script>
 
   
 </body>
