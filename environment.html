@@ -1,6 +1,7 @@
 <!-- 統一風格子頁範本範例：以首頁風格套用於子頁面 -->
 
 <!-- environment.html -->
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -10,7 +11,7 @@
   <style>
     :root {
       --primary-color: #f9f8f6;
-      --accent-color: #d4af37; /* 金色點綴 */
+      --accent-color: #d4af37;
       --text-color: #333;
       --font-sans: "Noto Sans TC", sans-serif;
     }
@@ -64,7 +65,7 @@
 
     section {
       padding: 3rem 1.5rem;
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
     }
 
@@ -75,8 +76,37 @@
       color: #222;
     }
 
-    ul {
-      padding-left: 1.5rem;
+    .grid-four,
+    .grid-two {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      justify-items: center;
+    }
+
+    .grid-four {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-four img,
+    .grid-two img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .room-description {
+      max-width: 900px;
+      margin: auto;
+      font-size: 1.05rem;
+      line-height: 1.8;
+      padding: 1rem;
+      text-align: left;
     }
 
     footer {
@@ -86,95 +116,25 @@
       font-size: 0.9rem;
       color: #666;
     }
-  @media (max-width: 600px) {
-    header h1 {
-      font-size: 1.5rem;
+
+    @media (max-width: 768px) {
+      .grid-four,
+      .grid-two {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+
+      .room-description {
+        padding: 0.5rem;
+      }
     }
-
-    section {
-      padding: 2rem 1rem;
-    }
-    .image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.image-grid img {
-  width: calc(50% - 1rem);
-  max-width: 400px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.room-description {
-  text-align: left;
-  max-width: 800px;
-  margin: auto;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  padding: 1rem;
-}
-
-@media (max-width: 768px) {
-  .image-grid img {
-    width: 100%;
-  }
-
-  .room-description {
-    padding: 0.5rem;
-  }
-  /* 圖片區塊 */
-.grid-four,
-.grid-two {
-  display: grid;
-  gap: 1rem;
-  margin-bottom: 2rem;
-  justify-items: center;
-}
-
-.grid-four {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid-two {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.grid-four img,
-.grid-two img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* 說明文字排版 */
-.room-description {
-  max-width: 900px;
-  margin: auto;
-  font-size: 1.05rem;
-  line-height: 1.8;
-  padding: 1rem;
-}
-
-/* RWD：小螢幕時自動單欄 */
-@media (max-width: 768px) {
-  .grid-four,
-  .grid-two {
-    grid-template-columns: 1fr;
-  }
-
-  .room-description {
-    padding: 0.5rem;
-  }
-}
-  }
-
   </style>
 </head>
 <body>
@@ -182,6 +142,7 @@
     <h1>白水音樂 WHITER MUSIC</h1>
     <p>錄音・練團・製作・信仰與音樂的交會處</p>
   </header>
+
   <nav>
     <a href="/whitermusic-site/index.html">關於白水</a>
     <a href="/whitermusic-site/environment.html">環境&設備</a>
@@ -190,53 +151,45 @@
     <a href="/whitermusic-site/place.html">白水位置</a>
     <a href="/whitermusic-site/booking.html">錄音/練團預約</a>
   </nav>
-  
-<section>
-  <h2>一樓練團室</h2>
 
-  <div class="image-grid">
-    <img src="1f_control.jpg" alt="控制系統">
-    <img src="1f_iem" alt="IEM監聽系統">
-    <img src="1f_fp30x.jpg" alt="DI與鍵盤">
-    <img src="1f_edrums.jpg" alt="電子鼓">
-  </div>
+  <section>
+    <h2>一樓練團室</h2>
+    <div class="grid-four">
+      <img src="1f_control.jpg" alt="控制系統">
+      <img src="1f_iem.jpg" alt="IEM監聽系統">
+      <img src="1f_fp30x.jpg" alt="DI與鍵盤">
+      <img src="1f_edrums.jpg" alt="電子鼓">
+    </div>
+    <div class="room-description">
+      <p><strong>練團室控制系統：</strong>Behringer X32rack，搭載 Yamaha Stagepas 600BT LR 兩副 PA 喇叭，高品質主動式 DI100</p>
+      <p><strong>監聽系統：</strong>獨立 IEM 立體聲，每位樂手 URX P2 耳擴及 ATH-M20x 耳罩式監聽</p>
+      <p><strong>樂器系統：</strong>KB：Roland FP-30X ／ E-Drum：Yamaha Efnote 3 Hybrid</p>
+    </div>
 
-  <div class="room-description">
-    <p><strong>練團室控制系統：</strong>Behringer X32rack，搭載 Yamaha Stagepas 600BT LR 兩副 PA 喇叭，高品質主動式 DI100</p>
-    <p><strong>監聽系統：</strong>獨立 IEM 立體聲，每位樂手 URX P2 耳擴及 ATH-M20x 耳罩式監聽</p>
-    <p><strong>樂器系統：</strong>KB：Roland FP-30X ／ E-Drum：Yamaha Efnote 3 Hybrid</p>
-  </div>
-
-  <h2>二樓錄音室</h2>
-
-  <div class="image-grid">
-    <img src="2f_gear.jpg" alt="錄音室硬體">
-    <img src="2f_mics.jpg" alt="錄音室麥克風">
-  </div>
-
-  <div class="room-description">
-    <p><strong>錄音室硬體：</strong>Kali LP6 監聽喇叭、SSL12 錄音介面、1273 Dual Mic Preamp、76-KT Compressor</p>
-    <p><strong>麥克風：</strong>Warm Audio WA87、AKG C214、AT-2035</p>
-    <p><strong>軟體：</strong>Pro Tools、Logic Pro</p>
-  </div>
-</section>
+    <h2>二樓錄音室</h2>
+    <div class="grid-two">
+      <img src="2f_gear.jpg" alt="錄音室硬體">
+      <img src="2f_mics.jpg" alt="錄音室麥克風">
+    </div>
+    <div class="room-description">
+      <p><strong>錄音室硬體：</strong>Kali LP6 監聽喇叭、SSL12 錄音介面、1273 Dual Mic Preamp、76-KT Compressor</p>
+      <p><strong>麥克風：</strong>Warm Audio WA87、AKG C214、AT-2035</p>
+      <p><strong>軟體：</strong>Pro Tools、Logic Pro</p>
+    </div>
+  </section>
 
   <div style="text-align: center; margin-top: 2rem;">
-  <a href="https://lin.ee/ub9tvNF" target="_blank">
-    <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png"
-         alt="LINE"
-         style="
-           height: 36px;
-           border: 1px solid #00a600;
-           border-radius: 6px;
-           box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-           transition: transform 0.2s;
-         "
-         onmouseover="this.style.transform='scale(1.05)'"
-         onmouseout="this.style.transform='scale(1)'"
-    />
-  </a>
-</div>
+    <a href="https://lin.ee/ub9tvNF" target="_blank">
+      <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png"
+           alt="LINE"
+           style="height: 36px; border: 1px solid #00a600; border-radius: 6px;
+           box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: transform 0.2s;"
+           onmouseover="this.style.transform='scale(1.05)'"
+           onmouseout="this.style.transform='scale(1)'"
+      />
+    </a>
+  </div>
+
   <footer>
     <p>&copy; 2025 白水音樂 WHITER MUSIC. 版權所有。</p>
   </footer>
