@@ -94,6 +94,40 @@
     section {
       padding: 2rem 1rem;
     }
+    .image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.image-grid img {
+  width: calc(50% - 1rem);
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.room-description {
+  text-align: left;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .image-grid img {
+    width: 100%;
+  }
+
+  .room-description {
+    padding: 0.5rem;
+  }
+}
   }
 
   </style>
@@ -111,12 +145,37 @@
     <a href="/whitermusic-site/place.html">白水位置</a>
     <a href="/whitermusic-site/booking.html">錄音/練團預約</a>
   </nav>
-  <section>
-  <h1>環境介紹</h1>
-  <p>
-    等待更新內容中
-  </p>
-  </section>
+  
+<section>
+  <h2>一樓練團室</h2>
+
+  <div class="image-grid">
+    <img src="images/environment/1f_control.jpg" alt="控制系統">
+    <img src="images/environment/1f_iem" alt="IEM監聽系統">
+    <img src="images/environment/1f_fp30x.jpg" alt="DI與鍵盤">
+    <img src="images/environment/1f_edrums.jpg" alt="電子鼓">
+  </div>
+
+  <div class="room-description">
+    <p><strong>練團室控制系統：</strong>Behringer X32rack，搭載 Yamaha Stagepas 600BT LR 兩副 PA 喇叭，高品質主動式 DI100</p>
+    <p><strong>監聽系統：</strong>獨立 IEM 立體聲，每位樂手 URX P2 耳擴及 ATH-M20x 耳罩式監聽</p>
+    <p><strong>樂器系統：</strong>KB：Roland FP-30X ／ E-Drum：Yamaha Efnote 3 Hybrid</p>
+  </div>
+
+  <h2>二樓錄音室</h2>
+
+  <div class="image-grid">
+    <img src="images/environment/2f_gear.jpg" alt="錄音室硬體">
+    <img src="images/environment/2f_mics.jpg" alt="錄音室麥克風">
+  </div>
+
+  <div class="room-description">
+    <p><strong>錄音室硬體：</strong>Kali LP6 監聽喇叭、SSL12 錄音介面、1273 Dual Mic Preamp、76-KT Compressor</p>
+    <p><strong>麥克風：</strong>Warm Audio WA87、AKG C214、AT-2035</p>
+    <p><strong>軟體：</strong>Pro Tools、Logic Pro</p>
+  </div>
+</section>
+
   <div style="text-align: center; margin-top: 2rem;">
   <a href="https://lin.ee/ub9tvNF" target="_blank">
     <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png"
