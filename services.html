@@ -1,6 +1,4 @@
-<!-- 統一風格子頁範本範例：以首頁風格套用於子頁面 -->
-
-<!-- services.html -->
+<!-- services.html 內容區塊：服務與計費方式 -->
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -10,13 +8,9 @@
   <style>
     :root {
       --primary-color: #f9f8f6;
-      --accent-color: #d4af37; /* 金色點綴 */
+      --accent-color: #d4af37;
       --text-color: #333;
       --font-sans: "Noto Sans TC", sans-serif;
-    }
-
-    * {
-      box-sizing: border-box;
     }
 
     body {
@@ -25,20 +19,14 @@
       padding: 0;
       background-color: var(--primary-color);
       color: var(--text-color);
-      line-height: 1.6;
+      line-height: 1.8;
     }
 
-    header {
-      padding: 2rem 1rem;
+    header, footer {
       text-align: center;
-      background-color: #ffffff;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      color: var(--accent-color);
+      background-color: #fff;
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #ddd;
     }
 
     nav {
@@ -48,14 +36,12 @@
       gap: 1rem;
       padding: 1rem;
       background-color: #fafafa;
-      border-bottom: 1px solid #e0e0e0;
     }
 
     nav a {
       text-decoration: none;
       color: var(--text-color);
       font-weight: bold;
-      transition: color 0.2s;
     }
 
     nav a:hover {
@@ -63,38 +49,25 @@
     }
 
     section {
-      padding: 3rem 1.5rem;
       max-width: 900px;
       margin: auto;
+      padding: 2rem 1rem;
     }
 
-    section h2 {
+    h2 {
+      color: var(--accent-color);
       border-left: 5px solid var(--accent-color);
       padding-left: 1rem;
-      margin-bottom: 1rem;
-      color: #222;
+      margin-top: 3rem;
     }
 
-    ul {
-      padding-left: 1.5rem;
+    .price {
+      color: var(--accent-color);
+      font-weight: bold;
     }
 
-    footer {
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-
-      section {
-        padding: 2rem 1rem;
-      }
+    p {
+      margin: 1rem 0;
     }
   </style>
 </head>
@@ -103,39 +76,55 @@
     <h1>白水音樂 WHITER MUSIC</h1>
     <p>錄音・練團・製作・信仰與音樂的交會處</p>
   </header>
+
   <nav>
-    <a href="/whitermusic-site/index.html">關於白水</a>
-    <a href="/whitermusic-site/environment.html">環境&設備</a>
-    <a href="/whitermusic-site/services.html">服務&方案</a>
-    <a href="/whitermusic-site/founder.html">創辦人/錄音師</a>
-    <a href="/whitermusic-site/place.html">白水位置</a>
-    <a href="/whitermusic-site/booking.html">錄音/練團預約</a>
+    <a href="index.html">關於白水</a>
+    <a href="environment.html">環境&設備</a>
+    <a href="services.html">服務&方案</a>
+    <a href="founder.html">創辦人/錄音師</a>
+    <a href="place.html">白水位置</a>
+    <a href="booking.html">錄音/練團預約</a>
   </nav>
+
   <section>
-  <h1>服務項目</h1>
-  <ul>
-    <li><strong>錄音服務：</strong>提供專業錄音環境與工程師協助，適合錄製人聲、樂器、敬拜音樂。</li>
-    <li><strong>靜音練團室：</strong>採用耳機監聽系統，避免噪音干擾，適合教會團隊或創作練習。</li>
-    <li><strong>混音 / 母帶處理：</strong>提供專業混音與後製，提升作品質感。</li>
-    <li><strong>現場錄音與側錄：</strong>可支援活動或敬拜現場的高品質音頻收錄。</li>
-  </ul>
+    <h2>🎸 練團室 Rehearsal Studio</h2>
+    <p><strong>一般練團：</strong>週日～週五 10:00–23:30<br>
+    <span class="price">NT$400／小時</span><br>
+    提供 IEM 與近場監聽雙系統，最少預約兩小時，晚上9:00後不提供近場 PA。<br>
+    ※ 如需側錄，費用另外計算。</p>
+
+    <p><strong>練團月租方案：</strong>私訊洽談<br>
+    長期使用者可另議優惠</p>
+
+    <h2>🎙 錄音 Recording</h2>
+    <p><strong>一般錄音：</strong>含錄音師、空間與器材<br>
+    <span class="price">NT$1200／小時</span></p>
+
+    <p><strong>Podcast 專案：</strong>僅限 Podcast 用途，含簡單人聲剪輯、優化<br>
+    <span class="price">NT$500／小時</span></p>
+
+    <p><strong>專業 Cover 方案：</strong><br>
+    全曲錄製 <span class="price">NT$8000／首</span><br>
+    完整一主一副 <span class="price">NT$5000／首</span><br>
+    副歌＋影片 <span class="price">NT$3000／首</span><br>
+    ※ Cover 方案可含錄影，若需高品質畫面可自備設備。</p>
+
+    <p><strong>麥錄大包裹：</strong>可分兩日錄製，共 7 小時<br>
+    <span class="price">NT$6000／包</span></p>
+
+    <p><strong>樂團方案：</strong>三日內錄完，總共 18 小時<br>
+    <span class="price">NT$20000／首</span><br>
+    ※ 學生樂團與初次錄製可享折扣，請私訊洽詢。</p>
+
+    <h2>🎛 混音 Mixing & 📀 母帶後製 Mastering</h2>
+    <p><strong>混音：</strong>任一聲部（主唱、吉他、貝斯、鼓...）<br>
+    <span class="price">NT$2000／聲部</span>（含剪輯、效果、調音）</p>
+
+    <p><strong>母帶後製：</strong><br>
+    <span class="price">NT$1000／首</span><br>
+    標準化音量與整體聲音動態調整</p>
   </section>
-  <div style="text-align: center; margin-top: 2rem;">
-  <a href="https://lin.ee/ub9tvNF" target="_blank">
-    <img src="https://scdn.line-apps.com/n/line_add_friends/btn/zh-Hant.png"
-         alt="LINE"
-         style="
-           height: 36px;
-           border: 1px solid #00a600;
-           border-radius: 6px;
-           box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-           transition: transform 0.2s;
-         "
-         onmouseover="this.style.transform='scale(1.05)'"
-         onmouseout="this.style.transform='scale(1)'"
-    />
-  </a>
-</div>
+
   <footer>
     <p>&copy; 2025 白水音樂 WHITER MUSIC. 版權所有。</p>
   </footer>
