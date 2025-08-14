@@ -127,42 +127,44 @@
   .room-description {
     padding: 0.5rem;
   }
-  .grid-four {
+  /* 圖片區塊 */
+.grid-four,
+.grid-two {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-bottom: 2rem;
+  justify-items: center;
+}
+
+.grid-four {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .grid-two {
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin-bottom: 2rem;
 }
 
 .grid-four img,
 .grid-two img {
   width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
+/* 說明文字排版 */
 .room-description {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
   font-size: 1.05rem;
   line-height: 1.8;
   padding: 1rem;
 }
 
-/* RWD 設定 */
+/* RWD：小螢幕時自動單欄 */
 @media (max-width: 768px) {
-  .grid-four {
-    grid-template-columns: 1fr;
-  }
-
+  .grid-four,
   .grid-two {
     grid-template-columns: 1fr;
   }
@@ -170,8 +172,6 @@
   .room-description {
     padding: 0.5rem;
   }
-}
-
 }
   }
 
